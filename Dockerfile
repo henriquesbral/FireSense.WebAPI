@@ -11,7 +11,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["FireSense.WebApi/FireSense.WebApi.csproj", "FireSense.WebApi/"]
+COPY ["FireSense.WebApi.csproj", "FireSense.WebApi/"]
 RUN dotnet restore "./FireSense.WebApi/FireSense.WebApi.csproj"
 COPY . .
 WORKDIR "/src/FireSense.WebApi"
