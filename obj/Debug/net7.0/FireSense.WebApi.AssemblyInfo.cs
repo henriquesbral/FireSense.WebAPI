@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FireSense.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a874730808b6d17588aa6906063e511113c9f2f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ce866e59473f3e75e7af8fc4dcbf6e2e9afbfc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("FireSense.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FireSense.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

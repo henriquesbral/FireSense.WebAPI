@@ -1,0 +1,112 @@
+[
+  {
+    "ContainingType": "FireSense.WebApi.Controllers.AuthController",
+    "Method": "Auth",
+    "RelativePath": "api/auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FireSense.WebApi.Controllers.LocalizacaoController",
+    "Method": "BuscarAlertas",
+    "RelativePath": "api/BuscarAlertas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FireSense.WebApi.Controllers.LocalizacaoController",
+    "Method": "EnviarAlerta",
+    "RelativePath": "api/EnviarAlerta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dadosRequest",
+        "Type": "FireSense.WebApi.Model.Entities.DadosLocalizacao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FireSense.WebApi.Controllers.UsuarioController",
+    "Method": "Adicionar",
+    "RelativePath": "api/Usuario/Adicionar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioView",
+        "Type": "FireSense.WebApi.ViewModel.UsuarioViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FireSense.WebApi.Controllers.UsuarioController",
+    "Method": "AlterarSenha",
+    "RelativePath": "api/Usuario/AlterarSenha",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "novaSenha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FireSense.WebApi.Controllers.UsuarioController",
+    "Method": "Autenticar",
+    "RelativePath": "api/Usuario/Autenticar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

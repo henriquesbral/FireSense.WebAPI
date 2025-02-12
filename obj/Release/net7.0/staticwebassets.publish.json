@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bzZWu5mgOcu6+vw6pbtqR+71R/XkOGed+rkGT6+0l9g=",
+  "Source": "FireSense.WebApi",
+  "BasePath": "_content/FireSense.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

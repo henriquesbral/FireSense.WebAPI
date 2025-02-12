@@ -1,5 +1,6 @@
 ﻿using FireSense.WebApi.Model.Interfaces;
 using FireSense.WebApi.Services;
+using FireSense.WebApi.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FireSense.WebApi.Controllers
@@ -18,11 +19,11 @@ namespace FireSense.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Auth(string usuario, string senha)
+        public async Task<IActionResult> Auth(AuthViewModel auth)
         {
-            if (!string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(senha))
+            if (!string.IsNullOrEmpty(auth.Usuario) && !string.IsNullOrEmpty(auth.Senha))
             {
-                var user = _usuarioRepository.ObterAutenticar(usuario, senha);
+                var user = _usuarioRepository.ObterAutenticar(auth.Usuario, auth.Senha);
                 var token = TokenService.GenerateToken(user);
 
                 return Ok(token);

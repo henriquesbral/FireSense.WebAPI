@@ -3,7 +3,7 @@ using FireSense.WebApi.Model.Entities;
 using FireSense.WebApi.Model.Interfaces;
 using FireSense.WebApi.ViewModel;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc; 
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace FireSense.WebApi.Controllers
@@ -57,21 +57,21 @@ namespace FireSense.WebApi.Controllers
         [Authorize]
         [HttpPut]
         [Route("/api/[controller]/AlterarSenha")]
-        public async Task<IActionResult> AlterarSenha(string login, string senha, string novaSenha)
+        public async Task<IActionResult> AlterarSenha(AlterarSenhaViewModel novaSenha)
         {
             try
             {
-                var usuario = _usuarioRepository.Obter(login);
+                var usuario = _usuarioRepository.Obter(novaSenha.Login);
 
                 if(usuario != null)
                 {
 
-                    if (senha != novaSenha)
+                    if (novaSenha.NovaSenha != novaSenha.ConfirmaSenha)
                         return BadRequest("As senhas não são iguais, por gentileza verificar novamente !");
 
-                    if (usuario.Login == login && senha == novaSenha)
+                    if (usuario.Login == novaSenha.Login && novaSenha.NovaSenha == novaSenha.ConfirmaSenha)
                     {
-                        usuario.Senha = senha;
+                        usuario.Senha = novaSenha.NovaSenha;
                         _usuarioRepository.Update(usuario);
                         return Ok("Senha atualizada");
                     }
@@ -95,16 +95,16 @@ namespace FireSense.WebApi.Controllers
         [Authorize]
         [HttpGet]
         [Route("/api/[controller]/Autenticar")]
-        public async Task<IActionResult> Autenticar(string login, string senha)
+        public async Task<IActionResult> Autenticar(AutenticarViewModel user)
         {
             try
             {
-                var usuario = _usuarioRepository.ObterAutenticar(login, senha);
+                var usuario = _usuarioRepository.ObterAutenticar(user.Usuario, user.Senha);
                 
                 if (usuario == null)
                     return BadRequest("Usuario não encontrado, por favor acione a equipe de desenvolvimento.");
 
-                if (usuario.Login != login && usuario.Senha != senha)
+                if (usuario.Login != user.Usuario && usuario.Senha != user.Senha)
                 {
                     return BadRequest("Usuario e ou senha incorretos, por gentileza validar novamente!");
                 }
