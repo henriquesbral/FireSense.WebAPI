@@ -146,25 +146,24 @@
         "tags": [
           "Usuario"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AutenticarViewModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AutenticarViewModel"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AutenticarViewModel"
-              }
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "senha",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -187,20 +186,6 @@
             "nullable": true
           },
           "confirmaSenha": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AutenticarViewModel": {
-        "type": "object",
-        "properties": {
-          "usuario": {
-            "type": "string",
-            "nullable": true
-          },
-          "senha": {
             "type": "string",
             "nullable": true
           }

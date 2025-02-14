@@ -83,8 +83,13 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "FireSense.WebApi.ViewModel.AutenticarViewModel",
-        "IsRequired": true
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senha",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

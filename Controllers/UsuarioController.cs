@@ -95,16 +95,16 @@ namespace FireSense.WebApi.Controllers
         [Authorize]
         [HttpGet]
         [Route("/api/[controller]/Autenticar")]
-        public async Task<IActionResult> Autenticar(AutenticarViewModel user)
+        public IActionResult Autenticar(string user, string senha)
         {
             try
             {
-                var usuario = _usuarioRepository.ObterAutenticar(user.Usuario, user.Senha);
+                var usuario = _usuarioRepository.ObterAutenticar(user, senha);
                 
                 if (usuario == null)
                     return BadRequest("Usuario não encontrado, por favor acione a equipe de desenvolvimento.");
 
-                if (usuario.Login != user.Usuario && usuario.Senha != user.Senha)
+                if (usuario.Login != user && usuario.Senha != senha)
                 {
                     return BadRequest("Usuario e ou senha incorretos, por gentileza validar novamente!");
                 }
