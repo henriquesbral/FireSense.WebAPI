@@ -8,14 +8,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "senha",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "auth",
+        "Type": "FireSense.WebApi.ViewModel.AuthViewModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -71,19 +66,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "login",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "senha",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "novaSenha",
-        "Type": "System.String",
-        "IsRequired": false
+        "Type": "FireSense.WebApi.ViewModel.AlterarSenhaViewModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -97,14 +82,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "login",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "senha",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "user",
+        "Type": "FireSense.WebApi.ViewModel.AutenticarViewModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -8,7 +8,12 @@ namespace FireSenseInfra.Interfaces
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private readonly FireSenseContext _context = new FireSenseContext();
+        private readonly FireSenseContext _context;
+
+        public UsuarioRepository(FireSenseContext context)
+        {
+            _context = context;
+        }
 
         public void Add(Usuario usuario)
         {

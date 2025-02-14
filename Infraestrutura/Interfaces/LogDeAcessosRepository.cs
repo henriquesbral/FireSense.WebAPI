@@ -7,7 +7,12 @@ namespace FireSense.WebApi.Infraestrutura.Interfaces
 {
     public class LogDeAcessosRepository : ILogDeAcessosRepository
     {
-        private readonly FireSenseContext _context = new FireSenseContext();
+        private readonly FireSenseContext _context;
+
+        public LogDeAcessosRepository(FireSenseContext context)
+        {
+            _context = context;
+        }
 
         public void Add(LogDeAcessos logAcesso)
         {

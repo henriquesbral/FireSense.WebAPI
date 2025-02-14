@@ -103,11 +103,13 @@ namespace FireSense.WebApi.Controllers
         [Authorize]
         [HttpPost]
         [Route("/api/BuscarAlertas")]
-        public async Task<IActionResult> BuscarAlertas()
+        public IActionResult BuscarAlertas()
         {
             try
             {
-                return Ok("ok");
+                var alertas = _localizacaoRepository.BuscarAlertas();
+
+                return Ok(alertas);
             }
             catch (Exception ex)
             {

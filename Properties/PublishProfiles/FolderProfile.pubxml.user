@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\FireSense</_PublishTargetUrl>
+    <History>True|2025-02-12T13:59:54.0094822Z||;True|2025-02-12T10:53:28.1140072-03:00||;False|2025-02-12T10:48:49.8840558-03:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="Kestrel:Certificates:Development:Password">
+      <Value>f3d4cdf6-c68e-44da-93ef-5c6539bf0a69</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="SqlServer">
+      <Value>f3d4cdf6-c68e-44da-93ef-5c6539bf0a69</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="FireSenseInfra.Context.FireSenseContext">
+      <Value>f3d4cdf6-c68e-44da-93ef-5c6539bf0a69</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

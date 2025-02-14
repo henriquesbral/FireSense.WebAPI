@@ -1,4 +1,5 @@
 ﻿using FireSense.WebApi.Model.Entities;
+using FireSense.WebApi.ViewModel;
 
 namespace FireSense.WebApi.Model.Interfaces
 {
@@ -7,5 +8,8 @@ namespace FireSense.WebApi.Model.Interfaces
         void Add(Localizacao localizacao);
 
         Localizacao ObterCodLocal(int codUsuario);
+
+        List<AlertasViewModel> BuscarAlertas();
+
     }
 }

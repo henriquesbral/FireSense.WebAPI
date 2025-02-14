@@ -24,8 +24,11 @@ namespace FireSense.WebApi.Controllers
             if (!string.IsNullOrEmpty(auth.Usuario) && !string.IsNullOrEmpty(auth.Senha))
             {
                 var user = _usuarioRepository.ObterAutenticar(auth.Usuario, auth.Senha);
-                var token = TokenService.GenerateToken(user);
 
+                if (user == null) 
+                    return BadRequest("Usuario ou senha inválidos");
+
+                var token = TokenService.GenerateToken(user);
                 return Ok(token);
             }
 

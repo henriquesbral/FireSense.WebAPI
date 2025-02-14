@@ -6,7 +6,12 @@ namespace FireSense.WebApi.Infraestrutura.Interfaces
 {
     public class AlertaLocalizacaoRepository : IAlertaLocalizacaoRepository
     {
-        private readonly FireSenseContext _context = new FireSenseContext();
+        private readonly FireSenseContext _context;
+        public AlertaLocalizacaoRepository(FireSenseContext context)
+        {
+            _context = context;
+        }
+
         public void Add(AlertaLocalizacao alertaLocalizacao)
         {
             _context.Add(alertaLocalizacao);
