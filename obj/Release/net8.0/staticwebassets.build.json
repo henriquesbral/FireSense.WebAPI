@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Ub7LPFxeOPm3RipOvywLI/fAHJSMrBA6iLyNfnnN/zU=",
+  "Source": "FireSense.WebApi",
+  "BasePath": "_content/FireSense.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

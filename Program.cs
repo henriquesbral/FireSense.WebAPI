@@ -1,5 +1,5 @@
-using FireSense.WebApi;
 using FireSense.WebApi.Infraestrutura.Interfaces;
+using FireSense.WebApi.Model.Entities;
 using FireSense.WebApi.Model.Interfaces;
 using FireSenseInfra.Context;
 using FireSenseInfra.Interfaces;
